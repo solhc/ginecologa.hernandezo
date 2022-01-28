@@ -1,0 +1,25 @@
+@import '../base/variables';
+@import '../base/mixins';
+/* Pie de página*/
+footer {
+    @include grilla-footer();
+}
+
+
+.nav-footer{
+    ul{
+        li{
+            display: inline-block;
+            overflow:hidden;
+        }
+    }
+}
+
+.iconos{
+    height: $medidas-iconos-pie;
+    width: $medidas-iconos-pie;
+}
+.copy{
+   @include copy-right();
+  
+}

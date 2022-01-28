@@ -1,0 +1,65 @@
+@import '../base/variables';
+@import '../base/mixins';
+.container{
+    @include contenedor;
+}
+.doctora{
+    @include caja-flex-doc();
+    padding: 10px;
+    margin-top: 20px;
+}
+
+h3{
+    @include formato-h3;
+}
+
+.texto-cursivo{
+    @include font-cursiva;
+    @include centrado;
+}
+
+.interlinea{
+    @include espcacio-inter;
+}
+
+.descripcion-doctora{
+    @include parrafo-justificado;
+}
+
+p{
+    @include centrado;
+}
+
+/* Colores de los botones de los links curriculum y citas */
+.boton-link:link, a:visited{
+    @include boton-visited;
+    
+    &:hover{
+        background-color: rgb(95, 240, 245);;
+        color: rgb(74, 164, 238);
+        font: oblique bold;
+    }
+}
+
+/*Animación a las imágenes de servicios*/
+.imagen:hover {
+   @include animacion-imagenes;
+}
+
+/*Animación al letrero de promociones*/
+.maquina-escribir {
+    background:  #F5B7B1 ;
+    position: relative;
+
+    &::after
+    {
+       @include maquina-after;
+    }
+}
+   
+@keyframes maquinaescribir {
+   @include maquina-key;
+}
+
+
+

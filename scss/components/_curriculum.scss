@@ -1,0 +1,26 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+
+.doctora{
+    @include caja-flex-doc();
+    padding: 20px;
+    margin-top: 5px;
+}
+
+h2{
+    @include formato-h2();
+    &:hover{
+        background-color: rgb(95, 240, 245);
+    }
+}
+
+
+.texto-curri{
+    @include justificado();
+    padding: 20px;
+}
+p{
+    @include parrafo-justificado;
+}
+
